@@ -240,7 +240,9 @@ dec_string(Decoder* d, ERL_NIF_TERM* value)
         } else {
             ulen = utf8_validate(&(d->u[d->i]), d->len - d->i);
             if(ulen < 0) {
-                return 0;
+                // Replace unknown byte with an ASCII space.
+                d->u[d->i] = ' ';
+                ulen = 1;
             }
             d->i += ulen;
         }
