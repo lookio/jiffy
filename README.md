@@ -1,3 +1,5 @@
+migrated: https://gitlab.com/l1905/maven-business/lookio-legacy/jiffy
+
 Jiffy - JSON NIFs for Erlang
 ============================
 
